@@ -22,16 +22,7 @@ public class TestController {
     }
 
     @GetMapping(path = "test")
-    public Object test2(){
-        System.out.println("bbbbbbbbbb");
-        for(int i =0;i<1000;i++){
-            try {
-                Thread.sleep(500L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("BB==="+i);
-        }
-        return new Object();
+    public String test2(){
+        return "bbbbbbbbbb";
     }
 }
