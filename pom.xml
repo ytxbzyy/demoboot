@@ -7,8 +7,9 @@
     <groupId>com.yt.springboot</groupId>
     <artifactId>demo-boot</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging></packaging>
     <repositories>
-        <repository>
+        <!--<repository>
             <id>central2</id>
             <name>Maven Repository Switchboard</name>
             <layout>default</layout>
@@ -16,6 +17,23 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>-->
+        <repository>
+            <id>nexus-163</id>
+            <name>Nexus 163</name>
+            <url>http://mirrors.163.com/maven/repository/maven-public/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
         </repository>
     </repositories>
     <parent>
@@ -53,6 +71,16 @@
             <groupId>javax.persistence</groupId>
             <artifactId>persistence-api</artifactId>
             <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.5.1</version>
         </dependency>
     </dependencies>
 
